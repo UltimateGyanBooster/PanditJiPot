@@ -34,7 +34,7 @@ const NewProduct = ({ history }) => {
   "Designer Pots",
   "ALL",
   "Bonsai Pots",
-  ];
+  ];  
 
   useEffect(() => {
     if (error) {
@@ -51,7 +51,7 @@ const NewProduct = ({ history }) => {
 
   const createProductSubmitHandler = (e) => {
     e.preventDefault();
-
+    // console.log(name);
     const myForm = new FormData();
 
     myForm.set("name", name);
@@ -59,6 +59,7 @@ const NewProduct = ({ history }) => {
     myForm.set("description", description);
     myForm.set("category", category);
     myForm.set("Stock", Stock);
+    // console.log(myForm)
 
     images.forEach((image) => {
       myForm.append("images", image);
@@ -68,6 +69,7 @@ const NewProduct = ({ history }) => {
 
   const createProductImagesChange = (e) => {
     const files = Array.from(e.target.files);
+    // console.log(files)
 
     setImages([]);
     setImagesPreview([]);
@@ -81,7 +83,6 @@ const NewProduct = ({ history }) => {
           setImages((old) => [...old, reader.result]);
         }
       };
-
       reader.readAsDataURL(file);
     });
   };
@@ -171,6 +172,7 @@ const NewProduct = ({ history }) => {
 
             <Button
               id="createProductBtn"
+              htmlType="submit"
               type="submit"
               disabled={loading ? true : false}
             >

@@ -2,28 +2,33 @@
 display: inline;
   align-items: center;
   justify-content: space-between;
-    position: relative;
 }
-
-.contactContainer .page-header{
+.contactContainer .page{
+  position: relative;
+}
+.contactContainer .page .page-header{
  background-image: url("../../../images/banner.jpg");
  height: 60vh;
   width: auto;
   background-size: cover;
   background-repeat: no-repeat;
-  /* background-position: top 35% right 0; */
+  background-position: top 35% right 0;
    padding: 14px ; 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  opacity: 0.5;
-    
-  
+  opacity: 0.8; 
+    z-index: -1;
+ 
 }
 
- .contactContainer .page-header-text{
+ .contactContainer .page .page-header-text{
 position: absolute;
+z-index: 1;
+top: 120px;
+left:450px;
+
  }
  .contactContainer .page-header-text h2,
 .contactContainer .page-header-text p{
@@ -45,23 +50,26 @@ position: absolute;
   flex-direction: row;
   width: 100%;
   background-color: #181824;
+  position: absolute;
 }
 .contactContainer .location .details{
   width: 40%;
+  color: white;
+  margin-top: 20px;
+  margin-left: 50px;
 }
 
-.contactContainer .location .details span,
-#form-details form span{
-  font-size: 12pxs;
+.contactContainer .location .details span
+{
+font-size: 30px;
 }
-.contactContainer .location .details h2,
-.form-details form h2{
+.contactContainer .location .details h2{
  font-size: 26px;
  line-height: 35px;
  padding: 20px 0;
 }
 .contactContainer .location .details h3{
- font-size: 16px;
+ font-size: 20px;
 padding-bottom: 15px;
 }
 .contactContainer .location .details li{
@@ -69,13 +77,13 @@ list-style: none;
 display: flex;
 padding: 10px 0;
 }
-.contactContainer .location .details li i{
-font-size: 14px;
+.contactContainer .location .details li span{
+font-size: 30px;
 padding-right: 22px;
 }
 .contactContainer .location .details li p{
 margin: 0;
-font-size: 14px;
+font-size: 18px;
 }
 
 .contactContainer .location .map{

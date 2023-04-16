@@ -1,37 +1,37 @@
 import React from "react";
 import "./Contact.css";
 import { FcCallback } from "react-icons/fc";  
-import { FcClock} from "react-icons/fc";
+import { FaClock} from "react-icons/fa";
 import { FaLocationArrow } from "react-icons/fa";
 import {FaEnvelope} from "react-icons/fa";
 const Contact = () => {
   return (
     <div className="contactContainer">
-
-      <div className="page-header" >
-      </div>
-      <div className="page-header-text"><h2>#let's_talk</h2>
+      <div className="page">
+       <div className="page-header" > </div>
+        <div className="page-header-text"><h2>#let's_talk</h2>
         <p>LEAVE A MESSAGE, We love to hare form you!</p>
-      </div>
+        </div>
+        </div>
       <div className="location">
       <div class="details">
         <span>GET IN TOUCH </span>
         <h2>Visit one of our factory locations or contact us today</h2>
         <h3>Location</h3>
           <li>
-           <FaLocationArrow/>
+           <span><FaLocationArrow/></span>
             <p>Hno 32 Bhatti klan New Delhi 110074</p>
           </li>
           <li>
-          <FaEnvelope/>
+          <span><FaEnvelope/></span>
             <p>PanditJiPot@gmail.com</p>
           </li>
           <li>
-           <FcCallback/>
+          <span> <FcCallback/></span>
             <p>+91 9315061711 , +91 9891366446</p>
           </li>
           <li>
-            <FcClock/>
+            <span><FaClock/></span>
             <p>24/7</p>
           </li>
         </div>
@@ -48,7 +48,7 @@ const Contact = () => {
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+        title="myFrame"></iframe>
       </div>
     </div>
 </div>

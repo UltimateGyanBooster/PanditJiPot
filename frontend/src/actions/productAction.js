@@ -1,4 +1,3 @@
-
 import axios from "axios";
 
 import {
@@ -54,7 +53,8 @@ export const getProduct =
     } catch (error) {
       dispatch({
         type: ALL_PRODUCT_FAIL,
-        payload: error.response.data.message,
+        payload: error.message,
+        // payload: error.response.data.message,                                                                        
       });
     }
   };
